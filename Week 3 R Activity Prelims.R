@@ -42,7 +42,7 @@ GiaTitanic_Sex_Age <- data.frame(Sex = sex_column, Age = age_column)
 #Note that the subset only appears in the Console (not the Environment)
 #Task: Write the code to create a subset of the data where the Freq is > 25
 #If I wanted to save the subset, I would need to name it as done in the code above
-GiaTitanic[GiaTitanic$Freq > 25]
+GiaTitanic[GiaTitanic$Freq > 25, ]
 
 #This shows me how many rows are in my dataset and
 #TASK: Write the code that returns the number of rows
@@ -68,6 +68,6 @@ library(ggplot2)
 #and did not survive (2 bars)
 #Task: replace the dataframe name and column names to create the chart
 #(you should see the chart in the Plots window)
-ggplot(GiaTitanic, aes(Survived, NotSurvived)) +
+ggplot(GiaTitanic, aes(Survived, Freq)) +
   geom_col()
 
